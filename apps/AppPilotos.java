@@ -62,8 +62,7 @@ public class AppPilotos {
                     voltarMenu(in);
                 }
 
-                // Exiba os pilotos aqui
-
+                
                 voltarMenu(in);
             } else if (opcao == 3) {
                 System.out.println("Informe o cpf para localização");
