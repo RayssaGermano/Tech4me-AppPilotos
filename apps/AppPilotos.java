@@ -28,14 +28,14 @@ public class AppPilotos {
             in.nextLine(); // Tira o ENTER que ficou na entrada na instrução anterior
 
             if (opcao == 1) {
-                // Se não tem mais espaço no vetor, caio fora
+               
                 if (qtdCadastrados == MAX_ELEMENTOS) {
                     System.out.println("\nNão há espaço para cadastrar novos pilotos.");
                     voltarMenu(in);
                     continue;
                 }
 
-                // Cadastre seu piloto aqui
+                
                 Pessoa piloto = new Pessoa();
 
                 System.out.println("Digite um nome");
@@ -45,10 +45,9 @@ public class AppPilotos {
                 listaPilotos.add(piloto);
                 qtdCadastrados++;
 
-                System.out.println("\nPiloto cadastrado com sucesso.");
+                System.out.println("\nPiloto cadastrado com sucesso!");
                 voltarMenu(in);
             } else if (opcao == 2) {
-                // Se não tem ninguém cadastrado no vetor, caio fora
                 if (qtdCadastrados == 0) {
                     System.out.println("\nNão há pilotos cadastrados para exibir.");
                     voltarMenu(in);
@@ -112,7 +111,7 @@ public class AppPilotos {
         System.out.println("\nPressione ENTER para voltar ao menu.");
         in.nextLine();
 
-        // Limpa toda a tela, deixando novamente apenas o menu
+        
         if (System.getProperty("os.name").contains("Windows"))
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         else
