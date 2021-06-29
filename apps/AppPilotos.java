@@ -69,34 +69,33 @@ public class AppPilotos {
                 System.out.println("Informe o cpf para localização");
                 String cpfDigitado = in.nextLine();
                 for (Pessoa piloto : listaPilotos) {
-                     if (piloto.getCpf().toString().equals(cpfDigitado)) {
-                     System.out.printf("Piloto:  %s %s", piloto.getNome(), piloto.getCpf());
-                    voltarMenu(in);
-                    } 
-                        
-                };
+                    if (piloto.getCpf().toString().equals(cpfDigitado)) {
+                        System.out.printf("Piloto:  %s %s", piloto.getNome(), piloto.getCpf());
+                        voltarMenu(in);
+                    }
+
+                }
+                ;
 
                 System.out.println("Cpf não encontrado!");
                 voltarMenu(in);
-                    
-                
 
             } else if (opcao == 4) {
                 System.out.println("Informe a quantidade desejada");
                 String qtdDigitados;
-                try{
-                    qtdDigitados= in.nextLine();
-                   }catch(Exception ex){
-                        System.out.println("Por favor, digitar apenas números!");
-                        in.nextLine();
-                        continue;
-                   }
+                try {
+                    qtdDigitados = in.nextLine();
+                } catch (Exception ex) {
+                    System.out.println("Por favor, digitar apenas números!");
+                    in.nextLine();
+                    continue;
+                }
 
                 if (Integer.parseInt(qtdDigitados) < MAX_ELEMENTOS) {
                     System.out.println("Quantidade não pode ser menor que a cadastrada.");
                     voltarMenu(in);
                 } else {
-                     MAX_ELEMENTOS  = Integer.parseInt(qtdDigitados);
+                    MAX_ELEMENTOS = Integer.parseInt(qtdDigitados);
                     System.out.println("Quantidade atualiza com sucesso!");
                     voltarMenu(in);
                 }
